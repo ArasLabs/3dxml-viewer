@@ -1,0 +1,6 @@
+﻿<AML>
+ <Item type="Viewer" id="1D206D73453849D2AC5E48BA9DF0679B" action="add">
+  <viewer_url>./viewers/3dxml.html</viewer_url>
+  <name>3dxml</name>
+ </Item>
+</AML>

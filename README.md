@@ -8,12 +8,14 @@ This project and the following release notes have been migrated from the old Ara
 
 Release | Notes
 --------|--------
+[v1.2](https://github.com/ArasLabs/3dxml-viewer/releases/tag/v1.2) | Reformatting package
 [v1](https://github.com/ArasLabs/3dxml-viewer/releases/tag/v1) | Initial Release
 
 #### Supported Aras Versions
 
 Project | Aras
 --------|------
+[v1.2](https://github.com/ArasLabs/3dxml-viewer/releases/tag/v1)| 9.1, 9.2
 [v1](https://github.com/ArasLabs/3dxml-viewer/releases/tag/v1) | 9.1, 9.2
 
 ## Installation
@@ -32,22 +34,23 @@ Project | Aras
 #### Code Tree Installation
 
 1. Backup your code tree and store the archive in a safe place.
-2. Copy the 3dxml.html file in your local `..\3dxml-viewer\` folder
-3. Navigate to the root of your install directory and paste this file to `\Innovator\Client\scripts\viewers\`
+2. Copy the `Innovator` folder in your local `..\3dxml-viewer\` folder
+3. Paste this to the root of your install directory
 + By default your root directory is 	`C:\Program Files\Aras\Innovator`
 
 #### Database Installation
 
 1. Backup your database and store the BAK file in a safe place.
-2. Login to Aras Innovator as an administrator
-3. Navigate to Administration->File Handling->FileTypes
-4. Create a new FileType
-	+ Ext: 3dxml
-	+ Mime Type: application/octet-stream
-5. Navigate to Administration->File Handling->Viewers
-6. Create a new Viewer
-	+ Name: 3dxml
-	+ Path: `./viewers/3dxml.html`
+2. Open up the Aras Package Import tool.
+3. Enter your login credentials and click **Login**
+  * _Note: You must login as root for the package import to succeed!_
+4. Enter the package name in the TargetRelease field.
+  * Optional: Enter a description in the Description field.
+5. Enter the path to your local `..\3dxml-viewer\Import\imports.mf` file in the Manifest File field.
+6. Select all packages in the Available for Import field.
+7. Select Type = **Merge** and Mode = **Thorough Mode**.
+8. Click **Import** in the top left corner.
+9. Close the Aras Package Import tool.
 
 ## Contributing
 

@@ -1,0 +1,3 @@
+<imports>
+  <package name="aras_labs.3dxml_viewer" path="3dxml_viewer\Import" />
+</imports>

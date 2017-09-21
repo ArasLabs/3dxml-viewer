@@ -1,0 +1,15 @@
+﻿<AML>
+ <Item type="FileType" id="331FF861FBCA4F619A457BCA01B4BA44" action="add">
+  <extension>3dxml</extension>
+  <mimetype>application/octet-stream</mimetype>
+  <name>3dXML</name>
+  <Relationships>
+   <Item type="View With" id="C347D88224D64EAB83C7D69B3DB0B4CA" action="add">
+    <client>js</client>
+    <related_id keyed_name="3dxml" type="Viewer">1D206D73453849D2AC5E48BA9DF0679B</related_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="3dXML" type="FileType">331FF861FBCA4F619A457BCA01B4BA44</source_id>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>
