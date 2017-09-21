@@ -1,0 +1,59 @@
+﻿<!-- (c) Copyright by Aras Corporation, 2004-2007. -->
+<html>
+<head>
+
+  <script type="text/javascript" src="../../javascript/AddConfigurationLink.js"></script>
+
+  <script src="../../javascript/QueryString.js" type="text/javascript"></script>
+
+</head>
+<body bgcolor="#ffffff" topmargin="0" marginheight="0" leftmargin="0" marginwidth="0"
+  scroll="no">
+
+	
+	<SCRIPT LANGUAGE="Javascript"> 
+var playerInstalled = 0;
+MSDetect = "false"; 
+if (navigator.mimeTypes && navigator.mimeTypes.length) 
+{ 
+x = navigator.mimeTypes['application/x-3dxmlplugin']; 
+if (x && x.enabledPlugin) 
+playerInstalled = 1; 
+} 
+else 
+{ 
+MSDetect = "true"; 
+} 
+</SCRIPT> 
+<SCRIPT LANGUAGE="VBScript"> 
+on error resume next 
+If MSDetect = "true" Then 
+If NOT (IsObject(CreateObject("3DXMLPlugin"))) Then 
+playerInstalled = 0 
+Else 
+playerInstalled = 1 
+End If 
+End If 
+</SCRIPT> 
+<SCRIPT LANGUAGE="Javascript"> 
+if (playerInstalled == 0) 
+{ 
+alerts("3DXML not installed");
+} 
+else 
+{ 
+var file_url = QueryString("file_url").toString();
+file_url = encodeURI(file_url);
+
+WriteObject(
+'<object type="application/x-3dxmlplugin" id="3DXMLPluginId" height="100%" width="100%"> ' +
+'<param name="DocumentFile" value="' + file_url + '"> '+
+'</object>'
+);
+
+} 
+</SCRIPT>
+	
+
+</body>
+</html>
